@@ -82,6 +82,9 @@ abstract class FineDiffOp {
 	}
 
 class FineDiffDeleteOp extends FineDiffOp {
+
+	public $fromLen;
+
 	public function __construct($len) {
 		$this->fromLen = $len;
 		}
@@ -100,6 +103,9 @@ class FineDiffDeleteOp extends FineDiffOp {
 	}
 
 class FineDiffInsertOp extends FineDiffOp {
+
+	public $text;
+
 	public function __construct($text) {
 		$this->text = $text;
 		}
