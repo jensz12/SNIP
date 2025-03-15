@@ -161,7 +161,7 @@
                 </div>
             <?php } ?>
             <div class="d-flex flex-column flex-md-row gap-2">
-                <button type="submit" name="submit" value="submit" class="btn btn-primary btn-lg">
+                <button type="submit" name="submit" value="submit" class="btn btn-primary">
                     <i class="fa-regular fa-circle-up"></i>
                     <?php echo lang('paste_create'); ?>
                 </button>

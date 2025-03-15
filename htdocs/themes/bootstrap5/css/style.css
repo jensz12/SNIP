@@ -113,7 +113,7 @@ table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_
 /* line nums > 1000 are hidden */
 
 .CodeMirror ol {
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 .text {
@@ -205,11 +205,6 @@ a:hover {
 
 .nav-link, .navbar-brand {
     text-decoration: none !important;
-}
-
-/* CodeMirror */
-.dark-theme .CodeMirror {
-  color: #212529;
 }
 
 /* Alert Banner */
