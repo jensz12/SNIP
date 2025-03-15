@@ -80,6 +80,11 @@ In the folder doc/, you will find:
 Changelog
 ---------
 
+### Version 1.1.0:
+
+* New theme: Bootstrap5 ([13](https://github.com/MercanoGlobal/SNIP/issues/13))
+* Various bug fixes and improvements
+
 ### Version 1.0.0:
 
 * Updated CodeIgniter to 3.1.13
