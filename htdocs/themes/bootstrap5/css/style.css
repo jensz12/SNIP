@@ -1,0 +1,244 @@
+@media (min-width: 980px) {
+	body {
+		position: relative;
+		padding-top: 40px;
+	}
+}
+
+.hidden, .inv {
+	display: none;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  margin-top: 35px;
+  padding: 15px 0 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+  margin-bottom: 0;
+  color: #555;
+}
+
+section {
+	margin-bottom: 25px;
+}
+
+/* Table Sorter
+---------------------------------------------------*/
+div.dataTables_length label {
+	float: left;
+	text-align: left;
+}
+
+div.dataTables_filter label {
+	float: right;
+}
+
+div.dataTables_info {
+	padding-top: 8px;
+}
+
+div.dataTables_paginate {
+	float: right;
+	margin: 0;
+}
+
+table {
+	margin-bottom: 6px !important;
+	clear: both;
+}
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+table.table thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
+
+table.table thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
+
+/* Diff style
+-------------------------------------------------- */
+.text ins {
+    color: green;
+    background: #dfd;
+    text-decoration: none;
+}
+
+.text del {
+    color: red;
+    background: #fdd;
+}
+
+/* Messages
+-------------------------------------------------- */
+.message {
+	width: 100%;
+	font-size: 85%;
+	margin-top: 15px;
+	color: #fff;
+}
+
+.message.success {
+	background-color: green;
+}
+
+.message.status {
+	background: #DB9330;
+}
+
+.message.error {
+	background: red;
+}
+
+.message .container {
+	padding: 5px;
+}
+
+/* Search */
+.page-header {
+    position: relative;
+}
+
+/* line nums > 1000 are hidden */
+
+.CodeMirror ol {
+    margin-left: 40px;
+}
+
+.text {
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.ui-selectable>.ui-selected { background-color: #a6c9e2; }
+.ui-selectable>.ui-selecting { background: #FECA40; }
+
+.ui-selectable-helper {
+    position: absolute;
+    z-index: 100;
+    border:1px dotted black;
+}
+
+#embed_field {
+	width: 50%;
+}
+
+.qr {
+	float: right;
+}
+
+/* Light mode Paste Form background */
+.paste-form-bg {
+  background-color: #f9f9f9; 
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Paste Form background */
+.dark-theme .paste-form-bg {
+  background-color: #2c3034; 
+  color: #ffffff;
+}
+
+/* Muted text */
+.dark-theme .text-muted {
+  color: #7b7b7b !important;
+}
+
+/* Forms */
+.dark-theme .form-control, 
+.dark-theme .form-group {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* Placeholder color in dark mode */
+.dark-theme .form-control::placeholder {
+    color: #bbb;
+}
+
+/* Buttons styling */
+.dark-theme .btn {
+    border-color: #666;
+}
+
+/* Dropdowns */
+.dark-theme .form-select {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* Navbar styling */
+.custom-navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-theme .custom-navbar {
+    background-color: #343a40;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link, .navbar-brand {
+    text-decoration: none !important;
+}
+
+/* CodeMirror */
+.dark-theme .CodeMirror {
+  color: #212529;
+}
+
+/* Alert Banner */
+:root {
+  --alert-bg-start: #e3f2fd;
+  --alert-bg-end: #bbdefb;
+  --alert-text: #0d47a1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --alert-bg-start: #3f4c6b;
+    --alert-bg-end: #606c88;
+    --alert-text: #ecf0f1;
+  }
+}
+
+.alert-banner {
+  padding: 1rem 1.5rem;
+  margin-bottom: -30px;
+  border: none;
+  border-radius: 0.25rem;
+  background: linear-gradient(90deg, var(--alert-bg-start), var(--alert-bg-end));
+  color: var(--alert-text);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.alert-banner h5 {
+  margin: 0;
+  font-size: 15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}

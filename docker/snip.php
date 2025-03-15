@@ -89,12 +89,12 @@ $config['db_prefix'] = '';
  *
  * Which theme to use
  * Folder name in htdocs/themes/
- * Available Themes: default, bootstrap, bootstrap4 (WIP), gabdark, gabdark3, geocities, snowkat, stikkedizr, cleanwhite, i386
- * Responsive Themes: bootstrap, bootstrap4, stikkedizr, i386
+ * Available Themes: default, bootstrap, bootstrap5, gabdark, gabdark3, geocities, snowkat, stikkedizr, cleanwhite, i386
+ * Responsive Themes: bootstrap, bootstrap5, stikkedizr, i386
  * NOTE that only the responsive themes support the latest features, like File Uploads.
  *
  */
-$config['theme'] = 'bootstrap';
+$config['theme'] = 'bootstrap5';
 
 
 /**
@@ -103,7 +103,7 @@ $config['theme'] = 'bootstrap';
  * Display an alert banner on every page
  * The banner is multilingual, and its text can be modified in application/language/english/snip_lang.php
  * The banner design and position can be modified in each theme's style.css and header.php
- * Available Themes: bootstrap, bootstrap4, stikkedizr, i386
+ * Available Themes: bootstrap, bootstrap5, stikkedizr, i386
  *
  */
 $config['alert_banner'] = true;
