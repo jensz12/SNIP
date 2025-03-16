@@ -34,11 +34,12 @@ $this->carabiner->config(array(
 ));
 
 $this->carabiner->css('bootstrap.min.css');
-$this->carabiner->css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
 $this->carabiner->css('style.css');
 $this->carabiner->css('codemirror.css');
 
 $this->carabiner->display('css'); 
+
+echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">';
 
 $searchparams = ($this->input->get('search') ? '?search=' . $this->input->get('search') : '');
 ?>
