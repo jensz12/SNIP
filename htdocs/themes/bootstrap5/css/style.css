@@ -113,7 +113,8 @@ table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_
 /* line nums > 1000 are hidden */
 
 .CodeMirror ol {
-    margin-left: 30px;
+    margin-left: 50px;
+    padding-left: 0.5rem;
 }
 
 .text {
