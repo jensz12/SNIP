@@ -25,7 +25,7 @@ Here are some features:
 Check it out
 ------------
 
-<img src="https://raw.githubusercontent.com/MercanoGlobal/SNIP/main/doc/snip_demo.png" alt="SNIP"></a>
+<img src="https://raw.githubusercontent.com/MercanoGlobal/SNIP/main/doc/img/snip_demo.png" alt="SNIP"></a>
 
 
 Prerequisites
@@ -68,7 +68,7 @@ All files are served directly; the SNIP-configuration for Docker resides in dock
 Documentation
 -------------
 
-In the folder doc/, you will find:
+In the doc/ folder, you will find:
 
 * Web server example configurations for Apache, Nginx, Lighttpd, Cherokee
 * A troubleshooting guide
@@ -82,7 +82,7 @@ Changelog
 
 ### Version 1.1.0:
 
-* New theme: Bootstrap5 ([13](https://github.com/MercanoGlobal/SNIP/issues/13))
+* New theme: Bootstrap5 ([13](https://github.com/MercanoGlobal/SNIP/issues/13)) - [View Theme](https://raw.githubusercontent.com/MercanoGlobal/SNIP/main/doc/img/snip_dark.png)
 * Various bug fixes and improvements
 
 `The snip.php config file was updated to support the new theme.`
