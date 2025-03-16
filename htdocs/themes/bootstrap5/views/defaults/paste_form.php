@@ -176,8 +176,8 @@
                     ?>
                 </div>
 
-                <!-- Right column adbox: visible only on md+ (desktop/tablets) -->
-                <div class="col-md-6 d-none d-md-block ms-5">
+                <!-- Right column adbox: visible only on md+ (desktop/tablets) - Based on your design preference, you can use 'ms-auto' instead of 'ms-5' -->
+                <div class="col-md-6 d-none d-md-block align-self-center ms-5">
                     <!-- Ad, image, or text goes here 
                     <div class="p-3">
                         <h5>Ad, Notice or Image</h5>
