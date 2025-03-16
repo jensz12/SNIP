@@ -103,21 +103,21 @@ ST.line_highlighter = function () {
 ST.highlight_lines = function () {
     var wloc = window.location.href;
     if (wloc.indexOf('#') > -1) {
-        $('.container .CodeMirror li').css('background', 'none');
+        $('.container .CodeMirror li').removeClass('highlight');
 
         var lines = wloc.split('#')[1];
         if (lines.indexOf('-') > -1) {
             var start_line = parseInt(lines.split('-')[0].replace('L', ''), 10);
             var end_line = parseInt(lines.split('-')[1].replace('L', ''), 10);
             for (var i = start_line; i <= end_line; i++) {
-                $('.container .CodeMirror li:nth-child(' + i + ')').css('background', '#F8EEC7');
+                $('.container .CodeMirror li:nth-child(' + i + ')').addClass('highlight');
             }
         } else {
             var re = new RegExp('^L[0-9].*?$');
             var r = lines.match(re);
             if (r) {
                 var marked_line = lines.replace('L', '');
-                $('.container .CodeMirror li:nth-child(' + marked_line + ')').css('background', '#F8EEC7');
+                $('.container .CodeMirror li:nth-child(' + marked_line + ')').addClass('highlight');
             }
         }
     }
@@ -389,8 +389,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!themeToggle) return;
 
-    // Function to apply the theme
-    function applyTheme(isDark) {
+    // Function to apply the theme. The 'manual' parameter indicates if this change was user-initiated.
+    function applyTheme(isDark, manual = false) {
         document.body.classList.toggle('dark-theme', isDark);
 
         if (nav) {
@@ -403,35 +403,36 @@ document.addEventListener('DOMContentLoaded', function () {
             table.classList.toggle('table-dark', isDark);
         }
 
+        // Update the toggle state
         themeToggle.checked = isDark;
-        localStorage.setItem('darkTheme', isDark ? 'true' : 'false');
+
+        // Only update localStorage if the change is manual.
+        if (manual) {
+            localStorage.setItem('darkTheme', isDark ? 'true' : 'false');
+        }
     }
 
-    // Check for saved theme preference
+    // Check for a saved manual preference.
     const savedTheme = localStorage.getItem('darkTheme');
 
-    // Check system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    // Apply initial theme
-    if (savedTheme) {
+    if (savedTheme !== null) {
+        // Apply the saved manual preference.
         applyTheme(savedTheme === 'true');
-    } else if (prefersDark) {
-        applyTheme(true);
     } else {
-        applyTheme(false);
+        // Otherwise, use the system preference.
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark);
     }
 
-    // Listen for changes in system preference
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-        // Only apply system preference if no manual preference is saved
-        if (!localStorage.getItem('darkTheme')) {
+    // Listen for system changes only if there's no manual override.
+    if (localStorage.getItem('darkTheme') === null) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
             applyTheme(event.matches);
-        }
-    });
+        });
+    }
 
-    // Theme toggle event listener (for manual toggling)
+    // Listen for manual toggle.
     themeToggle.addEventListener('change', function () {
-        applyTheme(this.checked);
+        applyTheme(this.checked, true);
     });
 });
