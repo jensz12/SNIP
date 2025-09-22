@@ -13,7 +13,8 @@ services:
       - 8075:80
 
   php:
-    image: snip-php:1
+    build:
+      context: ./docker/php
     volumes:
       - ./docker/php.ini:/usr/local/etc/php/php.ini:ro
       - ./docker/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf:ro
@@ -21,8 +22,6 @@ services:
       - ./docker/snip.php:/htdocs/application/config/snip.php:ro
     depends_on:
       - mysql
-    build:
-      context: ./docker/php
 
   mysql:
     image: mariadb:11

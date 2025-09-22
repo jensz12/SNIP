@@ -58,9 +58,9 @@ Installation
 How to run it in Docker
 -----------------------
 
-    docker-compose up
+    docker compose up -d --build
 
-This automatically builds the docker-image and fires up Nginx, PHP and MariaDB. Access your SNIP instance at http://localhost/.
+This automatically builds the docker-image and fires up Nginx, PHP and MariaDB. Access your SNIP instance at http://localhost/ port 8075.
 
 All files are served directly; the SNIP-configuration for Docker resides in docker/snip.php
 
