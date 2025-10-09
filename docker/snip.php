@@ -61,7 +61,7 @@ $config['base_url'] = 'https://mywebsite.com/';
  * The database structure will be created automatically
  *
  */
-$config['db_hostname'] = '127.0.0.1';
+$config['db_hostname'] = 'mysql';
 $config['db_database'] = 'snip';
 $config['db_username'] = 'snip';
 $config['db_password'] = 'snip';
