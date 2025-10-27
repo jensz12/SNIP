@@ -80,6 +80,11 @@ In the doc/ folder, you will find:
 Changelog
 ---------
 
+### Version 1.1.1:
+
+* Fixed some Docker related issues
+* Minor fixes and improvements
+
 ### Version 1.1.0:
 
 * New theme: Bootstrap5 ([13](https://github.com/MercanoGlobal/SNIP/issues/13)) - [View Theme](https://raw.githubusercontent.com/MercanoGlobal/SNIP/main/doc/img/snip_dark.png)
