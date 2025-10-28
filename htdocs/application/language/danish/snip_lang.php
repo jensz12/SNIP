@@ -72,5 +72,5 @@ $lang['table_lang'] = 'Syntax';
 $lang['table_hits'] = 'Visninger';
 $lang['table_time'] = 'Hvornår';
 $lang['powered_by'] = 'Lavet med';
-$lang['alert_banner'] = 'ℹ️ Din data er sikker her... Med mindre du gør SNIP guderne sure. Og las os bare sige, de har en virkelig dårlig humor.';
+$lang['alert_banner'] = 'ℹ️ Din data er sikker her... Med mindre du gør SNIP guderne sure. Og lad os bare sige, de har en virkelig dårlig humor.';
 $lang['color_mode'] = 'Nattilstand';
